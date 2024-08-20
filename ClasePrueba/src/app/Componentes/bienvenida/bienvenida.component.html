@@ -1,0 +1,13 @@
+<h3>Empleados</h3>
+
+<ul>
+    <li *ngFor="let empleado of empleados">
+        <p>Nombre: {{empleado.nombre}}</p>
+        <p>Edad: {{empleado.edad}}</p>
+        <div *ngIf="!empleado.pasante">
+            <p>Puesto: {{empleado.datos.puesto}}</p>
+            <p>Antiguedad: {{empleado.datos.antiguedad}}</p>
+        </div>
+        <button (click)="saludo(empleado.nombre)">Saludar</button>
+    </li>
+</ul>
