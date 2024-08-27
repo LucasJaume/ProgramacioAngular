@@ -5,13 +5,15 @@ import { AppComponent } from './app.component';
 import { EncabezadoComponent } from './componentes/encabezado/encabezado.component';
 import { SidebarComponent } from './componentes/sidebar/sidebar.component';
 import { NavBarComponent } from './componentes/nav-bar/nav-bar.component';
+import { TablaComponent } from './componentes/tabla/tabla.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     EncabezadoComponent,
     SidebarComponent,
-    NavBarComponent
+    NavBarComponent,
+    TablaComponent
   ],
   imports: [
     BrowserModule
