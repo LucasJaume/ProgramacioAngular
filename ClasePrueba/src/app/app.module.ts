@@ -6,17 +6,33 @@ import { AppComponent } from './app.component';
 import { BienvenidaComponent } from './Componentes/bienvenida/bienvenida.component';
 import { PadreComponent } from './Componentes/padre/padre.component';
 import { HijoComponent } from './Componentes/hijo/hijo.component';
+import { MaterialComponent } from './Componentes/material/material.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatTableModule} from '@angular/material/table';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatSortModule} from '@angular/material/sort';
+import {MatIconModule} from '@angular/material/icon';
+import {MatTooltipModule} from '@angular/material/tooltip';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
     BienvenidaComponent,
     PadreComponent,
-    HijoComponent
+    HijoComponent,
+    MaterialComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatTableModule,
+    MatSortModule,
+    MatPaginatorModule,
+    MatIconModule,
+    MatTooltipModule
   ],
   providers: [],
   bootstrap: [AppComponent]
