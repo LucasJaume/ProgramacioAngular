@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {MatPaginatorModule} from '@angular/material/paginator';
+import { AlumnosService } from 'src/app/Services/alumnos.service';
 
 export interface Estudiantes{
   id:number
@@ -21,8 +22,18 @@ const Alumnos:Estudiantes[] = [
 })
 export class MaterialComponent {
   displayedColumns:String[]=['id','nombre', 'apellido', 'edad', 'accion']
+ 
+  constructor(private alumnosService:AlumnosService){
+  
+ }
+  
   listaEstudiantes=Alumnos;
 
+
+  public variable:String='';
+  Obtenernombreservicio():void{
+    this.variable=this.alumnosService.obtenerNombre()
+  }
 
   favoritos(elemento:Estudiantes){
     console.log(elemento)

@@ -6,6 +6,8 @@ import { EncabezadoComponent } from './componentes/encabezado/encabezado.compone
 import { SidebarComponent } from './componentes/sidebar/sidebar.component';
 import { NavBarComponent } from './componentes/nav-bar/nav-bar.component';
 import { TablaComponent } from './componentes/tabla/tabla.component';
+import { AppRoutingModule } from './app-routing.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { TablaComponent } from './componentes/tabla/tabla.component';
     TablaComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
