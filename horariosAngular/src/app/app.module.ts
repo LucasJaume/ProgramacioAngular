@@ -8,19 +8,20 @@ import { NavBarComponent } from './componentes/nav-bar/nav-bar.component';
 import { TablaComponent } from './componentes/tabla/tabla.component';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatTableModule } from '@angular/material/table';
 
 @NgModule({
   declarations: [
     AppComponent,
     EncabezadoComponent,
     SidebarComponent,
-    NavBarComponent,
-    TablaComponent
+    NavBarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
