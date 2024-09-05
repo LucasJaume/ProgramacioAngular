@@ -1,10 +1,14 @@
+.sidebar{
+    height: 550px;
+}
+
 ul{
     border-right: 1px solid black;
-    height: 550px;
 }
 li{
     padding: 20px;
     list-style: none;
+    border-bottom: solid 1px rgb(62, 60, 60);
 }
 a{
     text-decoration: none;

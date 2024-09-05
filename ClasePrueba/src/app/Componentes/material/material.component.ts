@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import { AlumnosService } from 'src/app/Services/alumnos.service';
+import { Estudiantes } from 'src/app/Interfaces/estudiantes';
 
-export interface Estudiantes{
-  id:number
-  nombre:String,
-  apellido:String,
-  edad: Number
-}
+// export interface Estudiantes{
+//   id:number
+//   nombre:String,
+//   apellido:String,
+//   edad: Number
+// }
 
 const Alumnos:Estudiantes[] = [
   {id: 2,nombre:'Lucas', apellido: 'Jaume', edad: 21},

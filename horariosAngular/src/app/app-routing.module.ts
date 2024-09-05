@@ -3,7 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { TablaComponent } from './componentes/tabla/tabla.component';
 
 const routes: Routes = [
-  {path:'padre', component:TablaComponent}
+  {path:'padre', component:TablaComponent},
+  {path:'', redirectTo:'padre', pathMatch:'full'}
 ];
 
 @NgModule({
