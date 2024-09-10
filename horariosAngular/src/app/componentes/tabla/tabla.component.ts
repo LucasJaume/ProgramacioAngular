@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import {MatTableModule} from '@angular/material/table';
-import {MatSelectModule} from '@angular/material/select';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { FormsModule } from '@angular/forms';
 
 const materias:any[]=[
   {lunes:"X", martes:"" ,miercoles:"" ,jueves:"X" ,viernes:""},
@@ -15,9 +15,7 @@ const materias:any[]=[
 @Component({
   selector: 'app-tabla',
   templateUrl: './tabla.component.html',
-  styleUrls: ['./tabla.component.css'],
-  standalone: true,
-  imports: [MatTableModule, MatFormFieldModule, MatSelectModule],
+  styleUrls: ['./tabla.component.css']
 })
 
 export class TablaComponent {

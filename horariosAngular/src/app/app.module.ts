@@ -12,6 +12,8 @@ import { MatTableModule } from '@angular/material/table';
 import { FooterComponent } from './componentes/footer/footer.component';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import { HorariosHijoComponent } from './componentes/horarios-hijo/horarios-hijo.component';
+import {MatSelectModule} from '@angular/material/select';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,8 @@ import { HorariosHijoComponent } from './componentes/horarios-hijo/horarios-hijo
     SidebarComponent,
     NavBarComponent,
     FooterComponent,
-    HorariosHijoComponent
+    HorariosHijoComponent,
+    TablaComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +31,9 @@ import { HorariosHijoComponent } from './componentes/horarios-hijo/horarios-hijo
     BrowserAnimationsModule,
     MatTableModule,
     MatIconModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatSelectModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
