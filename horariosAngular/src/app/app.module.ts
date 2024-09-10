@@ -11,6 +11,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTableModule } from '@angular/material/table';
 import { FooterComponent } from './componentes/footer/footer.component';
 import {MatTooltipModule} from '@angular/material/tooltip';
+import { HorariosHijoComponent } from './componentes/horarios-hijo/horarios-hijo.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import {MatTooltipModule} from '@angular/material/tooltip';
     EncabezadoComponent,
     SidebarComponent,
     NavBarComponent,
-    FooterComponent
+    FooterComponent,
+    HorariosHijoComponent
   ],
   imports: [
     BrowserModule,

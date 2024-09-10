@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import {MatTableModule} from '@angular/material/table';
+import {MatSelectModule} from '@angular/material/select';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 const materias:any[]=[
   {lunes:"X", martes:"" ,miercoles:"" ,jueves:"X" ,viernes:""},
@@ -10,15 +12,16 @@ const materias:any[]=[
   {lunes:"", martes:"" ,miercoles:"" ,jueves:"" ,viernes:"X"},
 ]
 
-
 @Component({
   selector: 'app-tabla',
   templateUrl: './tabla.component.html',
   styleUrls: ['./tabla.component.css'],
   standalone: true,
-  imports: [MatTableModule],
+  imports: [MatTableModule, MatFormFieldModule, MatSelectModule],
 })
+
 export class TablaComponent {
   displayedColumns: string[] = ['lunes', 'martes', 'miercoles', 'jueves', 'viernes'];
   dataSource = materias;
+  selected = '';
 }
