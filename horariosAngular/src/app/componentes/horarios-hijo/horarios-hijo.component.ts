@@ -1,5 +1,5 @@
 
-import { OnInit,Component, Input, Output } from '@angular/core';
+import { OnInit,Component, Input, Output, ChangeDetectorRef } from '@angular/core';
 import {MatTableModule} from '@angular/material/table';
 
 export interface Horarios{
@@ -33,10 +33,32 @@ export class HorariosHijoComponent implements OnInit {
   displayedColumns: string[] = ['hora', 'lunes', 'martes', 'miercoles','jueves','viernes'];
   dataSource = tabla;
   
+  constructor(private cd:ChangeDetectorRef){}
 
-ngOnInit(): void {
-  if (this.mensajePadre!="") {
-    console.log(this.mensajePadre)
+  ngOnInit(): void {
+    this.updateDisplayColumns()
   }
-}
+
+  ngOnChanges():void{
+    this.updateDisplayColumns()
+  }
+
+  private updateDisplayColumns():void{
+    if (this.mensajePadre === "nada") {
+      this.displayedColumns = ['hora'];
+    } else if (this.mensajePadre === "todos") {
+      this.displayedColumns = ['hora', 'lunes', 'martes', 'miercoles', 'jueves', 'viernes'];
+    } else if (this.mensajePadre === "lunes") {
+      this.displayedColumns = ['hora', 'lunes'];
+    } else if (this.mensajePadre === "martes") {
+      this.displayedColumns = ['hora', 'martes'];
+    } else if (this.mensajePadre === "miercoles") {
+      this.displayedColumns = ['hora', 'miercoles'];
+    } else if (this.mensajePadre === "jueves") {
+      this.displayedColumns = ['hora', 'jueves'];
+    } else if (this.mensajePadre === "viernes") {
+      this.displayedColumns = ['hora', 'viernes'];
+    }
+    this.cd.detectChanges(); // Forzar la detección de cambios
+  }
 }
