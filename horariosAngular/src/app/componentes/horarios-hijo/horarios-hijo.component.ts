@@ -1,26 +1,30 @@
 
 import { OnInit,Component, Input, Output, ChangeDetectorRef } from '@angular/core';
 import {MatTableModule} from '@angular/material/table';
+import { Horarios } from 'src/app/interface/horarios';
+import { HorariosService } from 'src/app/servicios/horarios.service';
 
-export interface Horarios{
-  hora: String;
-  lunes: string;
-  martes:string;
-  miercoles:string;
-  jueves:string
-  viernes:String
-}
+// export interface Horarios{
+//   hora: String;
+//   lunes: string;
+//   martes:string;
+//   miercoles:string;
+//   jueves:string
+//   viernes:String
+// }
 
 
-const tabla:Horarios[]=[
-{hora:"8:00", lunes:"Practica Pofesionalizante", martes:"Etica",miercoles:"base de datos", jueves:"practicas profesionalizante",viernes:""},
-{hora:"8:40", lunes:"Practica Pofesionalizante", martes:"Etica",miercoles:"base de datos", jueves:"practicas profesionalizante",viernes:"Gestion de Proyectos"},
-{hora:"9:20", lunes:"Practica Pofesionalizante", martes:"Etica",miercoles:"base de datos", jueves:"practicas profesionalizante",viernes:"Gestion de Proyectos"},
-{hora:"10.00", lunes:"Redes Comunicacion", martes:"Programacion",miercoles:"base de datos", jueves:"Programacion",viernes:"Gestion de Proyectos"},
-{hora:"10.40", lunes:"Redes Comunicacion", martes:"Programacion",miercoles:"", jueves:"Programacion",viernes:"Gestion de Proyectos"},
-{hora:"11:20", lunes:"Redes Comunicacion", martes:"Programacion",miercoles:"", jueves:"Programacion",viernes:""},
-{hora:"12.00", lunes:"Redes Comunicacion", martes:"",miercoles:"", jueves:"",viernes:""}
-]
+// const tabla:Horarios[]=[
+// {hora:"8:00", lunes:"Practica Pofesionalizante", martes:"Etica",miercoles:"base de datos", jueves:"practicas profesionalizante",viernes:""},
+// {hora:"8:40", lunes:"Practica Pofesionalizante", martes:"Etica",miercoles:"base de datos", jueves:"practicas profesionalizante",viernes:"Gestion de Proyectos"},
+// {hora:"9:20", lunes:"Practica Pofesionalizante", martes:"Etica",miercoles:"base de datos", jueves:"practicas profesionalizante",viernes:"Gestion de Proyectos"},
+// {hora:"10.00", lunes:"Redes Comunicacion", martes:"Programacion",miercoles:"base de datos", jueves:"Programacion",viernes:"Gestion de Proyectos"},
+// {hora:"10.40", lunes:"Redes Comunicacion", martes:"Programacion",miercoles:"", jueves:"Programacion",viernes:"Gestion de Proyectos"},
+// {hora:"11:20", lunes:"Redes Comunicacion", martes:"Programacion",miercoles:"", jueves:"Programacion",viernes:""},
+// {hora:"12.00", lunes:"Redes Comunicacion", martes:"",miercoles:"", jueves:"",viernes:""}
+// ]
+
+
 
 @Component({
   selector: 'app-horarios-hijo',
@@ -31,13 +35,19 @@ const tabla:Horarios[]=[
 export class HorariosHijoComponent implements OnInit {
   @Input() mensajePadre:string=""
   displayedColumns: string[] = ['hora', 'lunes', 'martes', 'miercoles','jueves','viernes'];
-  dataSource = tabla;
+  // dataSource = ;
   
-  constructor(private cd:ChangeDetectorRef){}
+  tabla:Horarios[]=[]
+
+  constructor(private cd:ChangeDetectorRef, private _horariosService:HorariosService){
+
+  }
+
 
   ngOnInit(): void {
     this.updateDisplayColumns()
-  }
+    this.tabla=this._horariosService.obtenerHorarios()
+    }
 
   ngOnChanges():void{
     this.updateDisplayColumns()
@@ -59,6 +69,6 @@ export class HorariosHijoComponent implements OnInit {
     } else if (this.mensajePadre === "viernes") {
       this.displayedColumns = ['hora', 'viernes'];
     }
-    this.cd.detectChanges(); // Forzar la detección de cambios
+    this.cd.detectChanges(); 
   }
 }
