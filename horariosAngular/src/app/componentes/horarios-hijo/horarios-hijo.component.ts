@@ -4,27 +4,6 @@ import {MatTableModule} from '@angular/material/table';
 import { Horarios } from 'src/app/interface/horarios';
 import { HorariosService } from 'src/app/servicios/horarios.service';
 
-// export interface Horarios{
-//   hora: String;
-//   lunes: string;
-//   martes:string;
-//   miercoles:string;
-//   jueves:string
-//   viernes:String
-// }
-
-
-// const tabla:Horarios[]=[
-// {hora:"8:00", lunes:"Practica Pofesionalizante", martes:"Etica",miercoles:"base de datos", jueves:"practicas profesionalizante",viernes:""},
-// {hora:"8:40", lunes:"Practica Pofesionalizante", martes:"Etica",miercoles:"base de datos", jueves:"practicas profesionalizante",viernes:"Gestion de Proyectos"},
-// {hora:"9:20", lunes:"Practica Pofesionalizante", martes:"Etica",miercoles:"base de datos", jueves:"practicas profesionalizante",viernes:"Gestion de Proyectos"},
-// {hora:"10.00", lunes:"Redes Comunicacion", martes:"Programacion",miercoles:"base de datos", jueves:"Programacion",viernes:"Gestion de Proyectos"},
-// {hora:"10.40", lunes:"Redes Comunicacion", martes:"Programacion",miercoles:"", jueves:"Programacion",viernes:"Gestion de Proyectos"},
-// {hora:"11:20", lunes:"Redes Comunicacion", martes:"Programacion",miercoles:"", jueves:"Programacion",viernes:""},
-// {hora:"12.00", lunes:"Redes Comunicacion", martes:"",miercoles:"", jueves:"",viernes:""}
-// ]
-
-
 
 @Component({
   selector: 'app-horarios-hijo',

@@ -1,0 +1,23 @@
+<div class="inputs">
+    <label for="1">Ingrese hora</label>
+    <input type="text" placeholder="08:00 - 08:40 / 8:40 - 09:20 / 09:20 - 10:00 / 10:00 - 10:40 / 10:40 - 11:20    " #hora>
+ 
+    <label for="2">Lunes</label>
+    <input type="text" placeholder="Ingrese materia" #lunes>
+ 
+    <label for="3">martes</label>
+    <input type="text" placeholder="Ingrese materia" #martes>
+ 
+    <label for="4">Miercoles</label>
+    <input type="text" placeholder="Ingrese materia" #miercoles>
+ 
+    <label for="5">Jueves</label>
+    <input type="text" placeholder="Ingrese materia" #jueves>
+ 
+    <label for="6">Viernes</label>
+    <input type="text" placeholder="Ingrese materia" #viernes>
+
+    <button (click)="guardarHorario(hora.value, lunes.value, martes.value, miercoles.value, jueves.value, viernes.value)">Guardar horario</button>
+    <button (click)="limpiar(hora, lunes, martes, miercoles, jueves, viernes)">Borra campos</button>   
+</div>
+ 
