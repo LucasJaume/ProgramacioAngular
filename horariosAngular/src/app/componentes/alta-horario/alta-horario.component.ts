@@ -28,7 +28,7 @@ export class AltaHorarioComponent {
     } 
 
     this._horarioService.agregarHorarios(nuevo)
-
+    
   }
 
 }
