@@ -13,7 +13,8 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatSortModule} from '@angular/material/sort';
 import {MatIconModule} from '@angular/material/icon';
 import {MatTooltipModule} from '@angular/material/tooltip';
-
+import { ObservablesComponent } from './Componentes/observables/observables.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import {MatTooltipModule} from '@angular/material/tooltip';
     BienvenidaComponent,
     PadreComponent,
     HijoComponent,
-    MaterialComponent
+    MaterialComponent,
+    ObservablesComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +34,8 @@ import {MatTooltipModule} from '@angular/material/tooltip';
     MatSortModule,
     MatPaginatorModule,
     MatIconModule,
-    MatTooltipModule
+    MatTooltipModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

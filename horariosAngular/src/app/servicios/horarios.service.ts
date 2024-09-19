@@ -25,8 +25,10 @@ export class HorariosService {
   agregarHorarios(nuevo:Horarios):number{
     this.horariosMaterias.push(nuevo)
     if(this.horariosMaterias.includes(nuevo)){
-        return 1
+      console.log("esta incluido")  
+      return 1
     }else{
+      console.log("No esta incluido")
       return -1
     }
   }

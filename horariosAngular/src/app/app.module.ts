@@ -13,9 +13,12 @@ import { FooterComponent } from './componentes/footer/footer.component';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import { HorariosHijoComponent } from './componentes/horarios-hijo/horarios-hijo.component';
 import {MatSelectModule} from '@angular/material/select';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AdministrarHorariosComponent } from './componentes/administrar-horarios/administrar-horarios.component';
 import { AltaHorarioComponent } from './componentes/alta-horario/alta-horario.component';
+import { LoginComponent } from './componentes/login/login.component';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -27,7 +30,8 @@ import { AltaHorarioComponent } from './componentes/alta-horario/alta-horario.co
     HorariosHijoComponent,
     TablaComponent,
     AdministrarHorariosComponent,
-    AltaHorarioComponent
+    AltaHorarioComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +41,10 @@ import { AltaHorarioComponent } from './componentes/alta-horario/alta-horario.co
     MatIconModule,
     MatTooltipModule,
     MatSelectModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]
