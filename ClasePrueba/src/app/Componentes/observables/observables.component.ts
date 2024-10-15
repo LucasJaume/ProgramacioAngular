@@ -10,7 +10,6 @@ export class ObservablesComponent implements OnInit {
   respuesta:any[]=[];
   constructor(private _pokeapi:PokeApiService){}
   
-  
   ngOnInit(): void {
     this._pokeapi.obtenerPokemons().subscribe(response=>{
       this.respuesta=response.results
@@ -19,6 +18,4 @@ export class ObservablesComponent implements OnInit {
       console.error("Error al obtener los datos"+error );
     })
   }
-  
-  
 }

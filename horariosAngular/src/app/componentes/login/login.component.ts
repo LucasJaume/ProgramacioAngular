@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { LoginService } from 'src/app/servicios/login.service';
 
 @Component({
   selector: 'app-login',
@@ -10,16 +11,25 @@ import { Router } from '@angular/router';
 export class LoginComponent {
   form = this.fb.group({
     'nombre':['', Validators.required],
-    'apellido':['', Validators.required],
-    'correo':['', Validators.required],
-    'documento':['', Validators.required],
-    'numero_documento':['', Validators.required]
+    'contrasena':['', Validators.required]
   })
 
-  constructor(private fb:FormBuilder, private router:Router){  }
+  constructor(private fb:FormBuilder, private router:Router, private _loginService:LoginService){  }
 
   navegar():void{
-    this.router.navigate(["/padre"])
+    if (this.form.valid) {
+      const nombre = this.form.get('nombre')?.value;
+      const constraseña = this.form.get('contrasena')?.value;
+
+      if(nombre==='lucas' && constraseña==='1234'){
+        this._loginService.inicioSesion()
+        this.router.navigate(['/padre'])
+      }else{
+        alert('Ingreso incorrecto')
+      }
+    }else{
+      this.form.markAllAsTouched();
+    }
   }
 }
   

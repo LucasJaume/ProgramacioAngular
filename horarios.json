@@ -1,0 +1,52 @@
+[
+    {
+    "hora":"08:00 - 08:40",
+    "lunes":"Practica Pofesionalizante",
+    "martes":"Etica",
+    "miercoles":"base de datos", 
+    "jueves":"practicas profesionalizante",
+    "viernes":""
+},
+    {"hora":"8:40 - 09:20", 
+    "lunes":"Practica Pofesionalizante", 
+    "martes":"Etica"
+    ,"miercoles":"base de datos", 
+    "jueves":"practicas profesionalizante",
+    "viernes":"Gestion de Proyectos"
+},
+    {"hora":"09:20 - 10:00", 
+    "lunes":"Practica Pofesionalizante", 
+    "martes":"Etica",
+    "miercoles":"base de datos", 
+    "jueves":"practicas profesionalizante",
+    "viernes":"Gestion de Proyectos"
+},
+    {"hora":"10:00 - 10:40", 
+    "lunes":"Redes Comunicacion", 
+    "martes":"Programacion",
+    "miercoles":"base de datos", 
+    "jueves":"Programacion",
+    "viernes":"Gestion de Proyectos"
+},
+    {"hora":"10:40 - 11:20", 
+    "lunes":"Redes Comunicacion", 
+    "martes":"Programacion",
+    "miercoles":"", 
+    "jueves":"Programacion",
+    "viernes":"Gestion de Proyectos"
+},
+    {"hora":"11:20 - 12:00", 
+    "lunes":"Redes Comunicacion",
+    "martes":"Programacion",
+    "miercoles":"", 
+    "jueves":"Programacion",
+    "viernes":""
+},
+    {"hora":"12:00 - 12:40", 
+    "lunes":"Redes Comunicacion", 
+    "martes":"",
+    "miercoles":"",
+    "jueves":"",
+    "viernes":""
+}
+  ]

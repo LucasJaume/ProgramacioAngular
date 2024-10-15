@@ -1,21 +1,25 @@
-<!-- AGREGAMOS NAVABAR Y AASIDE -->
- <div class="encabezado">
-    <app-encabezado/>
- </div>
-
- <nav>
-    <app-nav-bar/>
- </nav>
-
- <aside>
-    <app-sidebar/>
- </aside>
+<div *ngIf="!logeado">
+   <router-outlet/>
+</div>
  
- <table>
-    <router-outlet/>
- </table>
-
- <footer>
-   <app-footer/>
- </footer>
- 
+<div *ngIf="logeado">
+   <div class="encabezado">
+      <app-encabezado/>
+   </div>
+  
+   <nav>
+      <app-nav-bar/>
+   </nav>
+  
+   <aside>
+      <app-sidebar/>
+   </aside>
+   
+   <table>
+      <router-outlet/>
+   </table>
+  
+   <footer>
+     <app-footer/>
+   </footer>
+</div>
